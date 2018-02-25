@@ -1,0 +1,52 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-body">
+                <!--<div>
+                    <p class="btn btn-primary"><a href="#/addCandidate" style="color:white">Capture Candidate</a></p>
+                </div>-->
+                <div>
+                    <h1>Enquiries From Companies<h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="bs-example4" data-example-id="contextual-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>CompanyName</th>
+                                    <th>Contact Person</th>
+                                    <th>Email</th>
+                                    <th>Contact Number</th>
+                                    <th>Candidate in Question</th>
+                                    <th>CV</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" dir-paginate="enq in enquiries | itemsPerPage:5">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>{{enq.Company}}</td>
+                                    <td>{{enq.ContactPerson}}</td>
+                                    <td>{{enq.EmailAddress}}</td>
+                                    <td>{{enq.ContactNumber}}</td>
+                                    <td>{{enq.email}}</td>
+                                    <td><a href="{{enq.Cv}}" target="_blank">CV</a></td>
+                                    <td>{{status}}</td>
+                                    <!--<td>
+                                        <button class="btn-primary btn" ng-click="View()" style="background-color:darkblue;">View</button>
+                                    </td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true">
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

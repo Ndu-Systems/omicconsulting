@@ -1,0 +1,70 @@
+﻿ 	<!-- banner -->
+<div class="inner_page_agile2">
+    <h3>Apply</h3>
+    <p>South Africa's Creme de la Creme'</p>
+</div>
+<!--//banner -->
+<!--/w3_short-->
+<div class="services-breadcrumb_w3layouts">
+    <div class="inner_breadcrumb">
+
+        <ul class="short_w3ls" _w3ls>
+            <li><a href="#/">Home</a><span>|</span></li>
+            <li>Apply</li>
+        </ul>
+    </div>
+</div>
+<!--//w3_short-->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <div class="tittle_head_w3ls">
+            <h3 class="tittle">Apply</h3>
+        </div>
+        <div class="row" style="padding:2%;">
+            <div class="w3layouts_mail_grid"> 
+                <div class="row">
+                    <div class="col-md-6 wthree_contact_left_grid">
+                        <input type="text" name="Name" ng-model="name" placeholder="First Name" required="">
+                        <input type="text" name="Name" ng-model="surname" placeholder="Surname" required="">
+                        <input type="email" name="Email" placeholder="Email" ng-model="email" required="">
+                        <input type="text" name="Telephone" placeholder="Telephone" ng-model="tel" required="">
+                        <input type="text" name="IdNUmber" placeholder="ID Number" ng-model="idnumber" required="" class="ng-pristine ng-untouched ng-invalid ng-invalid-required">
+                        <!--CV  <input id="email" class="inpurn-form-btn" type="file" onchange="angular.element(this).scope().filesChanged(this)">-->
+                        <div class="form-inputs upload">
+                            <p>Upload your resume</p>
+                            <input type="file" id="fileselect" onchange="angular.element(this).scope().filesChanged(this)"/>
+                            <div id="filedrag">Upload</div>
+                        </div>
+                        <br />
+                        <br />
+                        <input type="button" value="Submit" ng-click="Submit()">
+                        <p>{{message}}</p>
+                    </div>
+                    <div class="col-md-6 wthree_contact_left_grid" style="padding-left: 8%;">
+                        <div class="row">
+                            <div class="location_box1">
+                                <h3>Position Advertised : {{Position}}</h3>
+                                <div class="person-info">
+                                    <ul>
+                                        <li><span>Job ID</span>: {{Id}}</li>
+                                        <li><span>Location</span>: {{Location}}</li>
+                                        <li><span>Industry</span>: {{Industry}}</li>
+                                        <li><span>Requirement</span>:{{Requirements}}</li>
+                                    </ul>
+                                </div>
+                                 <!--<ul class="top-btns">
+                                    <li><a href="#" class="fa fa-plus toggle"></a></li>
+                                    <li><a href="#" class="fa fa-star"></a></li>
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                </ul>-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <h4 class="ng-binding"></h4>
+                    <div class="clearfix"> </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-body">
+                <div>
+                    <h1>Vacancies<h1>
+                </div>
+                <div>
+                    <p class="btn btn-primary"><a href="#/addVacancy" style="color:white">Capture Vacancy</a></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="bs-example4" data-example-id="contextual-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Vacancy #</th>
+                                    <th>Employer</th>
+                                    <th>Contact Person</th>
+                                    <th>Contact Number</th>
+                                    <th>Email Address</th>
+                                    <th>Position</th>
+                                    <th>Location</th>
+                                    <th>Industry</th>
+                                    <th>Actions</th>
+                                    <!--<th>Actions</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" dir-paginate="vac in vacancies | itemsPerPage:5">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>{{vac.Id}}</td>
+                                    <td>{{vac.Employer}}</td>
+                                    <td>{{vac.ContactPerson}}</td>
+                                    <td>{{vac.Cell}}</td>
+                                    <td>{{vac.Email}}</td>
+                                    <td>{{vac.Position}}</td>
+                                    <td>{{vac.Location}}</td>
+                                    <td>{{vac.Industry}}</td>
+                                     <td>
+                                        <button class="btn" ng-click="ViewVacancy(vac)"style="background-color:blue; color:white;" >Details</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true">
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

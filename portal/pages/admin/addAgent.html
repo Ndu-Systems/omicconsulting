@@ -1,0 +1,74 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 style="text-align:center">Add Team Member</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="panel-body">
+                        <form role="form" class="form-horizontal">
+                          
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">First Name</label>
+                                <div class="col-md-8">
+                                    <div class="input-group input-icon right">
+                                        <input id="email" class="form-control1" ng-model="name" type="text" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Surname</label>
+                                <div class="col-md-8">
+                                    <div class="input-group input-icon right">
+                                        <input id="email" class="form-control1" ng-model="surname" type="text" placeholder="Surname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-8">
+                                    <div class="input-group input-icon right">
+                                        <input id="email" class="form-control1" ng-model="email" type="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>                         
+                            <!--<div class="form-group">
+                                <label class="col-md-2 control-label">Role</label>
+                                <div class="col-md-8">
+                                    <div class="input-group input-icon right">
+                                                <select name="role" ng-model="role">
+                                               <option value="admin">admin</option>
+                                               <option value="agent">agent</option>
+                                           </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                </div>
+                            </div>--> 
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <p style="color:red">{{message}}</p>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button class="btn-primary btn" ng-click="AddAgent()">Submit</button>
+                        <button class="btn-default btn" style="background-color:orange;"><a href="#/agent" style="color:white;">Cancel</a></button>
+                        <button class="btn-inverse btn" ng-click="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-body">
+                <div>
+                    <h1>Candidates<h1>
+                </div>
+                <div>
+                    <p class="btn btn-primary"><a href="#/addCandidate" style="color:white">Capture Candidate</a></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="bs-example4" data-example-id="contextual-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Candidate #</th>
+                                    <th>Position</th>
+                                    <th>Location</th>
+                                    <th>Industry</th>
+                                    <th>Email Address</th>
+                                    <th>Candidate CV</th>
+                                    <th>Availability</th>
+                                    <!--<th>Actions</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" dir-paginate="can in candidates | itemsPerPage:5">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <th>{{can.Id}}</th>
+                                    <td>{{can.Position}}</td>
+                                    <td>{{can.Location}}</td>
+                                    <td>{{can.Industry}}</td>
+                                    <td>{{can.email}}</td>
+                                    <td><a href="{{can.Cv}}" target="_blank">CV</a></td>
+                                    <td>{{can.Availability}}</td>
+                                    <td>
+                                       <button class="btn" ng-click="ViewCandidate(can)"style="background-color:blue; color:white;" >Details</button>
+                                   </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true">
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

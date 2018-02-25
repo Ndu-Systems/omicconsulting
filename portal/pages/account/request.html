@@ -1,0 +1,21 @@
+﻿ 
+<div id="login">
+  <div class="login-logo">
+      <h2 style="color:black">Makhawini Portal</h2>
+  </div>
+  <h2 class="form-heading">Request Access</h2>
+  <div class="app-cam">
+	  <form>
+		<input type="text" class="text" ng-model="name" placeholder="First Name">
+        <input type="text" class="text" ng-model="surname" placeholder="Surname">
+       <input type="email" class="text" ng-model="email"placeholder="Email Address">
+        <div class="submit"><input type="submit" ng-click="Request()" value="Submit"></div>
+        <p class="btn btn-warning" style="background-color:orange;color:white; border-color:orange;" ng-click="reset()">Reset</p>
+	</form>
+      <p style="color:red">{{message}}     <a href="#/">Go Back</a></p>
+  </div>
+   <div class="copy_layout login">
+      <p>Copyright &copy; 2017 | Makhawini Portal </p>
+   </div>
+</div>
+ 

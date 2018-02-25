@@ -1,0 +1,62 @@
+﻿
+    <div id="wrapper">        <!-- Navigation -->
+     <div ng-include="'pages/admin/nav.html'"></div>
+        <div id="page-wrapper">
+            <div class="graphs">
+                <div class="col_3">
+                    <a href="#/candidates">
+                        <div class="col-md-3 widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="pull-left fa fa-users icon-rounded bg-green1"></i>
+                                <div class="stats">
+                                    <h5><strong>{{candidateCount}}</strong></h5>
+                                    <span>Candidates</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/vacancies">
+                        <div class="col-md-3  widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="pull-left fa fa-briefcase user1 icon-rounded " style="background-color:darkblue"></i>
+                                <div class="stats">
+                                    <h5><strong>{{vacancyCount}}</strong></h5>
+                                    <span>Vacancies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/enquiries">
+                        <div class="col-md-3  widget widget1">
+                            <div class="r3_counter_box">
+                                <i class="pull-left fa fa-comments user1 icon-rounded " style="background-color:darkblue"></i>
+                                <div class="stats">
+                                    <h5><strong>{{enquiriesCount}}</strong></h5>
+                                    <span>Enquiries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+					<a href="#/applications">
+					<div class="col-md-3  widget widget1">
+                        <div class="r3_counter_box">
+                            <i class="pull-left fa fa-files-o user1 icon-rounded " style="background-color:darkblue"></i>
+                            <div class="stats">
+                                <h5><strong>{{applicationsCount}}</strong></h5>
+                                <span>New Applications</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="row">
+              <div>
+                <img src="images/banner1.jpg" class="img-responsive" style="width: 100%; padding-left: 16px;"/>
+              </div>
+            </div>
+        </div>
+
+
+    </div>

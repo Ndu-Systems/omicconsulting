@@ -1,0 +1,50 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-body">
+                <div>
+                   <h1>Applications For Vacancy</h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="bs-example4" data-example-id="contextual-table">
+					FILTER: <input ng-model="search" class="inpurn-form-btn">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Application #</th>
+                                    <th>Name</th>
+                                    <th>Tel</th>
+                                    <th>Email</th>
+                                    <th>CV</th>
+                                    <th>Job</th>
+                                    <th>Location</th>
+									<th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" dir-paginate="application in applications | filter:search | itemsPerPage:5">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>{{application.id}}</td>
+                                    <th>{{application.name}} {{application.surname}}</th>
+                                    <td>{{application.tel}}</td>
+                                    <td>{{application.email}}</td>
+                                    <td><a href="{{application.cv}}" target="_blank">{{application.name}}'s CV </a></td>
+                                    <td>{{application.Position}}</td>
+                                    <td>{{application.Location}}</td>
+									                   <td>{{application.status}}</td>
+                                </tr>                           
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true">
+                        </dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

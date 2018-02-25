@@ -1,0 +1,49 @@
+﻿<div id="wrapper">
+    <div ng-include="'pages/admin/nav.html'"></div>
+
+    <div id="page-wrapper">
+        <div class="panel">
+            <div class="panel-body">
+                <div>
+                    <h1>Team Members<h1>
+                </div>
+                <div>
+                    <p class="btn btn-primary"><a href="#/addAgent" style="color:white">Add Team Member</a></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="bs-example4" data-example-id="contextual-table">
+                        <table class="table">
+                            <thead>                               
+                                <tr>
+                                    <th>#</th>
+                                    <th>Agent #</th>
+                                    <th>Email</th>
+                                    <th>UserName</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" dir-paginate="age in users | itemsPerPage:5">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>{{age.Id}}</td>
+                                    <td>{{age.Email}}</td>
+                                    <td>{{age.Username}}</td>
+                                    <td>
+                                         <button class="btn" ng-click="ResetPassword(age)" style="background-color:green; color:white;">Reset Password</button>
+                                   </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls max-size="5"
+                                                 direction-links="true"
+                                                 boundary-links="true">
+                        </dir-pagination-controls>
+                        <div>
+                            <p class="bg-success">{{successmsg}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
