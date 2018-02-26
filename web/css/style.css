@@ -215,7 +215,7 @@ label {
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a.active {
-	color: #23B684;
+	color: #4640bd;
 }
 
 .navbar-default .navbar-nav>.open>a,
@@ -517,7 +517,7 @@ label {
 /*-- /search --*/
 
 #search_form {
-	background: #23B684;
+	background: #4640bd;
 	padding: 3em 2em;
 	text-align: center;
 }
@@ -853,7 +853,7 @@ h3.agile_heading.two {
 }
 
 .services-left-top:hover {
-	background: #23B684;
+	background: #4640bd;
 }
 
 .services-left-top:hover h5 {

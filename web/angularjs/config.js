@@ -1,5 +1,5 @@
 ﻿var extention = ".php";
-var host = "http://localhost/git.omic/web/api/";
+var host = "http://localhost:8080/omicconsulting/web/api/";
 //var host = "http://ndu-systems.net/demo/makhawini/web/api/";
 function GetApiUrl(serviceName) {
 

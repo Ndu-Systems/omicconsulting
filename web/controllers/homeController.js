@@ -240,5 +240,4 @@ app.controller('contactController', function ($http, $scope, $window) {
                   }
               });
     };
-    // end uplaod
 });
